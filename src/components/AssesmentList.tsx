@@ -35,16 +35,7 @@ const truncateContent = (html: string, limit: number) => {
 
 const AssessmentList = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const { loading, error, data } = useQuery<AssessmentData>(GET_ASSESSMENTS);
-
-  // if (loading)
-  //   return (
-  //     <Box sx={{ height: "100%", width: "100%" }}>
-  //       <CircularProgress />
-  //     </Box>
-  //   );
-  // if (error)
-  //   return <Typography color="error">Error: {error.message}</Typography>;
+  const { data } = useQuery<AssessmentData>(GET_ASSESSMENTS);
 
   const [expanded, setExpanded] = useState<string | null>(null);
 

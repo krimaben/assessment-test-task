@@ -52,6 +52,10 @@ const FormComponent: React.FC<FormComponentProps> = ({
         setSearchResults(results);
       }
       setCurrentPage(Math.min(currentPage + 1, pages.length));
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   };
 
